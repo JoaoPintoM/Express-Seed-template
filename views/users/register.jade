@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	h3 Register form
+	i You can simply register by providing your email and a password
+	br
+	br
+	.row
+		.col-md-6
+			form(role='form', method='POST', action='register')
+				.form-group
+					label(for='exampleInputEmail1') Email address
+					input#exampleInputEmail1.form-control(type='email',name='email', placeholder='Enter email')
+				.form-group
+					label(for='exampleInputPassword1') Password
+					input#exampleInputPassword1.form-control(type='password', name='password', placeholder='Select a Password')
+				button.btn.btn-default(type='submit') Submit
+		.col-md-2

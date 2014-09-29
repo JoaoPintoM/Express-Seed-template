@@ -1,4 +1,7 @@
-Express-Seed-template
-=====================
+node-local-auth-template // starter kit
+========================
 
-Seed template written in Node.js using Express, passport, mongoose and jade
+Reference Article : http://fullstackguy.azurewebsites.net/nodejs-local-authentification-starter-kit/
+
+
+--> added Facebook Authentification

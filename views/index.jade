@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	//- some layout with bootstrap
+	.row 
+		.col-md-8
+			pre.text-center
+				ul.list-unstyled
+					li
+						i the goal is to access my secrets
+					li(style='color:blue')
+						a(href='/secrets') >> My Secrets <<
+		.col-md-2

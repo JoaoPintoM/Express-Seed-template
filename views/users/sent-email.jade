@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+	h3 Reset your password
+
+	.row 
+		.col-md-8
+			pre.text-center
+				ul.list-unstyled
+					li
+						i the email is sent to #{email}
+						p we just sent you an Email
+
+	pre
+		p.alert-danger this section is ONLY for testing.. 
+		p.alert-danger PLEASE! Remove it! You should not be able to receive directly that link EXCEPT by Email
+		i gmail config example : 
+			a(href='https://github.com/andris9/nodemailer-wellknown#supported-services') other whellknown providers
+		br
+		blockquote
+			span var transporter = nodemailer.createTransport({
+			br
+			span    	service: 'gmail',
+			br
+			span    	auth: {
+			br
+			span       	 user: 'FAKE_EMAIL@gmail.com',
+			br
+			span     	 pass: 'B/\C0n'
+			br
+			span 	}
+			br
+			span });
+	a(href='/users/updatepwd-confirmation/#{secret}') 
+		h2 >>>click here to reset your password<<<

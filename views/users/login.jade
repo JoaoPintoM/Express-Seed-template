@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+
+	link(rel='stylesheet', href='../../css/auth-buttons.css')
+	
+	h3 Login form
+	.row 
+		.col-md-6
+				form(role='form', method='POST', action='login')
+					.form-group
+						label(for='exampleInputEmail1') Email address
+						input#exampleInputEmail1.form-control(type='email',name='email', placeholder='Enter email')
+					.form-group
+						label(for='exampleInputPassword1') Password
+						input#exampleInputPassword1.form-control(type='password', name='password', placeholder='Password')
+					button.btn.btn-default(type='submit') Submit
+					br
+					br
+					p 
+						a(href='forgotpassword') you don't remember your password ?
+		.col-md-6(style='padding-left: 50px;')
+					br
+					a.btn-auth.btn-facebook.large(href="/auth/facebook")
+						| Sign in with
+						b Facebook
