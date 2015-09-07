@@ -1,21 +1,12 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
+module.exports = function(app) {
+  var index = require('../controllers/index');
 
+  app.route('/')
+    .get(index.home);
 
-/* GET home page. */
-router.get('/500', function(req, res) {
-  res.render('500');
-});
+  app.route('/404').get(index.notFound);
 
-
-/* GET home page. */
-router.get('/404', function(req, res) {
-  res.render('404');
-});
-
-module.exports = router;
+  app.route('/505').get(index.error505);
+}

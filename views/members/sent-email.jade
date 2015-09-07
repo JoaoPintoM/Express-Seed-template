@@ -3,7 +3,7 @@ extends ../layout
 block content
 	h3 Reset your password
 
-	.row 
+	.row
 		.col-md-8
 			pre.text-center
 				ul.list-unstyled
@@ -12,9 +12,9 @@ block content
 						p we just sent you an Email
 
 	pre
-		p.alert-danger this section is ONLY for testing.. 
+		p.alert-danger this section is ONLY for testing..
 		p.alert-danger PLEASE! Remove it! You should not be able to receive directly that link EXCEPT by Email
-		i gmail config example : 
+		i gmail config example :
 			a(href='https://github.com/andris9/nodemailer-wellknown#supported-services') other whellknown providers
 		br
 		blockquote
@@ -31,5 +31,5 @@ block content
 			span 	}
 			br
 			span });
-	a(href='/users/updatepwd-confirmation/#{secret}') 
+	a(href='/members/updatepwd-confirmation/#{secret}')
 		h2 >>>click here to reset your password<<<

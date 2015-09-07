@@ -11,23 +11,27 @@ html
 			.col-md-5.text-right
 				.btn-group
 					//- we check if the user is logged (info provided by our middleware)
-					if !login 
-						a.btn.btn-default(type='button', href='/users/login')
+					if !login
+						a.btn.btn-default(type='button', href='/members/login')
 							span.glyphicon.glyphicon-log-in
 								|  Login
-						a.btn.btn-default(type='button', href='/users/register')
+						a.btn.btn-default(type='button', href='/members/register')
 							span.glyphicon.glyphicon-star
 								|  Register
 					else
 						if picture
 							img(src='#{picture}', alt='myphoto', style='margin-left:15px;')
-						a.btn.btn-default(type='button', href='/users/logout') Logout
+
+						//- if email
+						//- 	span #{email}
+
+						a.btn.btn-default(type='button', href='/members/logout') Logout
 
 
 		if message.success
 			.alert.alert-success(role='alert')
 				| #{message.success}
-		if message.error 
+		if message.error
 			.alert.alert-danger(role='alert')
 				| #{message.error}
 
